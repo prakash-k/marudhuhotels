@@ -276,6 +276,6 @@ class FooterSection extends StatelessWidget {
           size: 18,
         ),
       ),
-    );
+    ));
   }
 }
