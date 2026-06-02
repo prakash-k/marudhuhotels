@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--
+    If you are serving your web app in a path other than the root, change the
+    href value below to reflect the base path you are serving from.
+
+    The path provided below has to start and end with a slash "/" in order for
+    it to work correctly.
+
+    For more details:
+    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+
+    This is a placeholder for base href that will be replaced by the value of
+    the `--base-href` argument provided to `flutter build`.
+  -->
+  <base href="$FLUTTER_BASE_HREF">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="Experience traditional South Indian cuisine in Nagoya. Crafted with passion, heritage, and genuine family recipes. Enjoy authentic Dosa, Idli, South Indian Thali, Curries, and Vegetarian delights.">
+  <meta name="keywords" content="South Indian Restaurant Nagoya, Indian Food Nagoya, Dosa Nagoya, Thali Nagoya, Marudhu Restaurant Nagoya, Best Curry Nagoya, Authentic Indian Nagoya, South Asian Food Aichi">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://marudhu-nagoya.web.app/">
+  <meta property="og:title" content="MARUDHU | Authentic South Indian Restaurant Nagoya">
+  <meta property="og:description" content="Traditional South Indian taste in the heart of Nagoya. Traditional recipes, premium fresh ingredients, and warm Indian hospitality.">
+  <meta property="og:image" content="https://marudhu-nagoya.web.app/assets/images/dosa_banana_leaf.jpg">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="MARUDHU Restaurant">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png"/>
+
+  <title>MARUDHU | Authentic South Indian Restaurant Nagoya</title>
+  
+  <!-- Structured Data for Local Restaurant Business (SEO) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "MARUDHU South Indian Restaurant",
+    "image": "https://marudhu-nagoya.web.app/assets/images/dosa_banana_leaf.jpg",
+    "priceRange": "$$",
+    "telephone": "+81-XX-XXXX-XXXX",
+    "url": "https://marudhu-nagoya.web.app/",
+    "menu": "https://marudhu-nagoya.web.app/#menu",
+    "servesCuisine": "South Indian, Traditional Indian",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Nagoya, Aichi, Japan",
+      "addressLocality": "Nagoya",
+      "addressRegion": "Aichi",
+      "addressCountry": "JP"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 35.1814,
+      "longitude": 136.9063
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "opens": "11:00",
+        "closes": "22:00"
+      }
+    ],
+    "sameAs": [
+      "https://www.instagram.com/marudhu_nagoya",
+      "https://www.facebook.com/marudhunagoya"
+    ]
+  }
+  </script>
+
+  <link rel="manifest" href="manifest.json">
+  <style>
+    html, body {
+      background-color: #FAFAF9; /* Soft Ivory */
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+    }
+    #app-loader {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      width: 100vw;
+      font-family: 'Playfair Display', 'Georgia', serif;
+      transition: opacity 0.5s ease-out;
+    }
+    .spinner {
+      width: 50px;
+      height: 50px;
+      border: 3px solid #1F2937; /* Deep Charcoal */
+      border-top: 3px solid #F59E0B; /* Warm Saffron */
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+    .logo-text {
+      margin-top: 24px;
+      font-size: 32px;
+      font-weight: bold;
+      color: #1F2937;
+      letter-spacing: 4px;
+    }
+    .sub-text {
+      margin-top: 8px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #D97706; /* Accent Spice Orange */
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      font-family: 'Inter', sans-serif;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <div id="app-loader">
+    <div class="spinner"></div>
+    <div class="logo-text">MARUDHU</div>
+    <div class="sub-text">South Indian Restaurant</div>
+  </div>
+  <script>
+    // Remove loader once Flutter mounts
+    window.addEventListener('flutter-first-frame', function () {
+      var loader = document.getElementById('app-loader');
+      if (loader) {
+        loader.style.opacity = '0';
+        setTimeout(function() {
+          loader.remove();
+        }, 500);
+      }
+    });
+  </script>
+  <script src="flutter_bootstrap.js" async></script>
+</body>
+</html>
